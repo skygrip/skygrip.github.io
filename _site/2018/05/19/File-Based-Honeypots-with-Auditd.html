@@ -44,21 +44,21 @@
 <meta name="generator" content="Jekyll v3.8.1" />
 <meta property="og:title" content="File Based Honeypots with Auditd" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. there aremany kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one i want to talk about is honeypot files (honeyfiles)." />
-<meta property="og:description" content="Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. there aremany kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one i want to talk about is honeypot files (honeyfiles)." />
+<meta name="description" content="Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. There are many kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one I want to talk about is honeypot files (honeyfiles)." />
+<meta property="og:description" content="Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. There are many kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one I want to talk about is honeypot files (honeyfiles)." />
 <link rel="canonical" href="http://localhost:4000/2018/05/19/File-Based-Honeypots-with-Auditd.html" />
 <meta property="og:url" content="http://localhost:4000/2018/05/19/File-Based-Honeypots-with-Auditd.html" />
 <meta property="og:site_name" content="IronMoon" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-19T09:00:00+10:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"File Based Honeypots with Auditd","dateModified":"2018-05-19T09:00:00+10:00","datePublished":"2018-05-19T09:00:00+10:00","url":"http://localhost:4000/2018/05/19/File-Based-Honeypots-with-Auditd.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/05/19/File-Based-Honeypots-with-Auditd.html"},"description":"Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. there aremany kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one i want to talk about is honeypot files (honeyfiles).","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","headline":"File Based Honeypots with Auditd","dateModified":"2018-05-19T09:00:00+10:00","datePublished":"2018-05-19T09:00:00+10:00","url":"http://localhost:4000/2018/05/19/File-Based-Honeypots-with-Auditd.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/05/19/File-Based-Honeypots-with-Auditd.html"},"description":"Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. There are many kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one I want to talk about is honeypot files (honeyfiles).","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Manual seo tags -->
     <!--
     <title>File Based Honeypots with Auditd | IronMoon</title>
-    <meta name="description" content="Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. there aremany kinds of honeypo...">
+    <meta name="description" content="Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. There are many kinds of honeyp...">
     -->
 </head>
 
@@ -151,11 +151,66 @@
     
     </p>
   </header>
-  <section class="post-content"><p>Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. there aremany kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one i want to talk about is honeypot files (honeyfiles).</p>
+  <section class="post-content"><p>Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. There are many kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one I want to talk about is honeypot files (honeyfiles).</p>
 
-<p>These are files that can be placed on a filesystem that are designed to look entising, and when accessed trigger an auditd rule to let you know.</p>
+<p>Honeyfiles are files that can be placed on a filesystem that are designed to look entising, and when accessed trigger an auditd rule to let you know. An example could be putting a file called “passwords.txt” on the filesystem. Any attacker that gains access to the system is likely to want to know what that file contains.</p>
 
-<p>Honeyfiles are super easy to setup on</p>
+<p>We can start by creating some random files to put around the filesystem</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd if=/dev/urandom of=/SQLBackup-2017-11-24.gzip bs=120334KB count=1 iflag=fullblock
+dd if=/dev/urandom of=/root/passwords_encrypted.txt bs=334KB count=1 iflag=fullblock
+dd if=/dev/urandom of=/opt/apache-db-preupgrade.db bs=162334KB count=1 iflag=fullblock
+</code></pre></div></div>
+
+<p>The content of the files don’t matter, even touching the files will be enough to trigger an alert. However, providing some legitimate but useless data may servce to wase the time of the attacker, giving you more time to repond.</p>
+
+<p>Next we need to ensure that auditd is installed and running, on CentOS this would be done through the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install audit
+systemctl enable auditd
+systemctl start auditd
+</code></pre></div></div>
+
+<p>Next we create our custom rule files in auditd</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ironmoon ~ # vim /etc/audit/rules.d/70-honeyfiles.rules
+-w /SQLBackup-2017-11-24.gzip -p wra -k HONEYFILE_ACCESSS
+-w /root/passwords_encrypted.txt -p wra -k HONEYFILE_ACCESSS
+-w /opt/apache-db-preupgrade.db -p wra -k HONEYFILE_ACCESSS
+</code></pre></div></div>
+
+<p>In these rules “-w” means file followed by the filepath, and “-p wra” means trigger on file read, write, or attribute change. With the rule created we just need to make sure its imported and auditd reloads the configuration.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ironmoon ~ # augenrules
+root@ironmoon ~ # pkill -HUP -P 1 auditd
+</code></pre></div></div>
+
+<p>Now when we even access the files we will get a triggered alert</p>
+
+<p>root@ironmoon / # aureport -f</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File Report
+===============================================
+# date time file syscall success exe auid event
+===============================================
+1. 19/05/18 23:32:35 passwords_encrypted.txt 191 no /usr/bin/ls 1000 337
+2. 19/05/18 23:32:41 passwords_encrypted.txt 192 yes /usr/bin/stat 1000 340
+3. 19/05/18 23:36:17 passwords_encrypted.txt 191 no /usr/bin/ls 1000 341
+4. 19/05/18 23:36:21 SQLBackup-2017-11-24.gzip 191 no /usr/bin/ls 1000 342
+5. 19/05/18 23:38:26 SQLBackup-2017-11-24.gzip 191 no /usr/bin/ls 1000 343
+6. 19/05/18 23:38:26 SQLBackup-2017-11-24.gzip 192 yes /usr/bin/ls 1000 344
+7. 19/05/18 23:38:26 SQLBackup-2017-11-24.gzip 191 no /usr/bin/ls 1000 345
+8. 19/05/18 23:38:26 SQLBackup-2017-11-24.gzip 191 no /usr/bin/ls 1000 346
+</code></pre></div></div>
+
+<p>This allows us to see all the access to those files, but you may notice that you will recieve information about ALL access, including simply grabbing info about the file from the ls command, as a result some filtering is required.</p>
+
+<p>Now when its collected at a network loging server you can set up alerts whenever any access to the file is attempted. If we wanted the auditd logs to be forwared to syslog to be included in system logs, you can do that with the following setting</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ironmoon ~ # vim /etc/audisp/plugins.d/syslog.conf
+active = yes
+</code></pre></div></div>
+
 </section>
   
   <!-- Social media shares -->
@@ -259,7 +314,7 @@
   <div id="next-post" class="post-nav-post">
       <p>Next post</p>
       <a href="/2018/05/20/File-Tarpits.html">
-        File Tarpits, Taking File Based Honeypots even Further to Frustrate Attackers
+        File Tarpits: Potential Linux Filesystem Tricks to Frustrate Attackers
       </a>
   </div>
   
