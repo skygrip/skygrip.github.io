@@ -5,13 +5,37 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
         <link>http://localhost:4000/</link>
         <description></description>
-        <pubDate>Sat, 19 May 2018 16:21:19 +1000</pubDate>
+        <pubDate>Sun, 20 May 2018 18:45:37 +1000</pubDate>
+        
+        <item>
+            <title>File Tarpits, Taking File Based Honeypots even Further to Frustrate Attackers</title>
+            <link>/2018/05/20/File-Tarpits.html</link>
+            <guid isPermaLink="true">/2018/05/20/File-Tarpits.html</guid>
+            <description>&lt;p&gt;In the previous post we lernt about the power of file honeypots to detect malicious activity. But in this world of automation the time it takes for you to respond may be so long that its unliekly you can respond in time. in this post we will discuss some tactics to make your linux systems frustating to attackers who already have access.&lt;/p&gt;
+
+&lt;p&gt;Fitting 1000GB of data onto a 10GB filesystem&lt;/p&gt;
+
+&lt;p&gt;Infinitly recurring directories&lt;/p&gt;
+
+&lt;p&gt;Broken directories&lt;/p&gt;
+
+&lt;p&gt;Immutable flag on files&lt;/p&gt;
+
+&lt;p&gt;Immutable flag on folders&lt;/p&gt;
+
+</description>
+            <pubDate>Sun, 20 May 2018 09:00:00 +1000</pubDate>
+        </item>
         
         <item>
             <title>File Based Honeypots with Auditd</title>
             <link>/2018/05/19/File-Based-Honeypots-with-Auditd.html</link>
             <guid isPermaLink="true">/2018/05/19/File-Based-Honeypots-with-Auditd.html</guid>
-            <description>&lt;p&gt;File based honeypots are all the rage with&lt;/p&gt;
+            <description>&lt;p&gt;Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. there aremany kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one i want to talk about is honeypot files (honeyfiles).&lt;/p&gt;
+
+&lt;p&gt;These are files that can be placed on a filesystem that are designed to look entising, and when accessed trigger an auditd rule to let you know.&lt;/p&gt;
+
+&lt;p&gt;Honeyfiles are super easy to setup on&lt;/p&gt;
 </description>
             <pubDate>Sat, 19 May 2018 09:00:00 +1000</pubDate>
         </item>
@@ -22,13 +46,13 @@
             <guid isPermaLink="true">/2013/06/24/A_Tale_of_102_RFID_Cards.html</guid>
             <description>&lt;p&gt;About 6 months ago i bought 102 EM4100 protocol RFID cards (From &lt;a href=&quot;http://tinyurl.com/axrct2r&quot;&gt;here&lt;/a&gt;) and a compatible RFID reader &lt;a href=&quot;https://www.sparkfun.com/products/8419&quot;&gt;https://www.sparkfun.com/products/8419&lt;/a&gt;. This was to investigate how it was that these common RFID cards work.&lt;/p&gt;
 
-&lt;p&gt;EM4100 protocol cards, like the ones i bought, are factory programed with an 8bit Customer or Version ID, 32bit unique code and some parity information. Once the card powers up from being within proximity of a reader it starts blasting out this code encoded in Manchester Encoding and looks something like the following:&lt;/p&gt;
+&lt;p&gt;EM4100 protocol cards, like the ones I bought, are factory programed with a 8bit Customer or Version ID, 32bit unique code and some parity information. Once the card powers up from being within proximity of a reader it starts blasting out this code encoded in Manchester Encoding and looks something like the following:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2013-06-24/capture.png&quot; alt=&quot;Data capture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The theoretical minimum transmission speed possible is about 28ms, however many readers require you to transmit this code twice for it to be accepted.&lt;/p&gt;
 
-&lt;p&gt;This gives a total possible number of unique cards of 4,294,967,296 (2^32) or 1,099,511,627,776 (2^40) depending on if unique Customer or Version ID’s are used. At the theoretical minimum transmission speed of 28ms this gives a worst case brute force time of 3.8 years or 975.5 years if also using the Customer or Version ID’s bits.&lt;/p&gt;
+&lt;p&gt;This gives a total possible number of unique cards of 4,294,967,296 (2^32) or 1,099,511,627,776 (2^40) depending on if unique Customer or Version IDs are used. At the theoretical minimum transmission speed of 28ms this gives the worst case brute force time of 3.8 years or 975.5 years if also using the Customer or Version ID’s bits.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -36,15 +60,15 @@
 
 &lt;p&gt;A more realistic example of 200 valid cards would take 6.959 days or 4.87895 years without knowledge of the Customer or Version ID.&lt;/p&gt;
 
-&lt;p&gt;One major security feature is the relatively slow reading time, you will have a hard time finding a commercial reader that can read cards back to back at 28 milliseconds each. Generally you get a reading time between 0.1 and 1 seconds.&lt;/p&gt;
+&lt;p&gt;One major security feature is the relatively slow reading time, you will have a hard time finding a commercial reader that can read cards back-to-back at 28 milliseconds each. Generally you get a reading time between 0.1 and 1 seconds.&lt;/p&gt;
 
-&lt;p&gt;However this security is relying on the numbers being uniquely random. If all cards use the same Customer or Version ID and an attacker has knowledge of this Customer or Version ID they have reduced the system entropy by 1,095,216,660,480 potential cards, a 99.61% reduction.&lt;/p&gt;
+&lt;p&gt;However, this security is relying on the numbers being uniquely random. If all cards use the same Customer or Version ID and an attacker has knowledge of this Customer or Version ID they have reduced the system entropy by 1,095,216,660,480 potential cards, a 99.61% reduction.&lt;/p&gt;
 
 &lt;p&gt;So with the entire security of the system relying on the strength of the random number generator used to program these cards, lets have a look at two separate packs of 51 cards i bought on eBay from China.&lt;/p&gt;
 
 &lt;p&gt;99 of the cards had the same Customer or Version ID of 0×06 with the remaining 3 cards having 0×07.&lt;/p&gt;
 
-&lt;p&gt;Here is a graph showing the 99 cards in the order they where shipped in with their Customer or Version ID omitted.&lt;/p&gt;
+&lt;p&gt;Here is a graph showing the 99 cards in the order they were shipped in with their Customer or Version ID omitted.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2013-06-24/graph.png&quot; alt=&quot;Data capture&quot; /&gt;&lt;/p&gt;
 
@@ -65,7 +89,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Right off the bat you can tell that there is a problem here, the vast majority of cards are with a very close proximity of others. The problem is even worse when the cards have been clustered.&lt;/p&gt;
+&lt;p&gt;Right off the bat you can tell that there is a problem here, the vast majority of cards are a proximity of others. The problem is even worse when the cards have been clustered.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -130,11 +154,11 @@
 
 &lt;p&gt;Even with a more realistic reading time of 0.2 seconds per card you have a 40.4% chance of guessing a valid RFID card within 5666.448 seconds or 95 minutes based on 1 card within cluster 1 alone. Including cluster 2 you have a 78.08% chance of guessing a valid RFID card in under 10292.948 seconds or 172 minutes.&lt;/p&gt;
 
-&lt;p&gt;This pattern persisted through two stacks of cards (individually packaged i might add) so if you know the supplier used you could have a good chance of guessing a valid card. The big “security by X” logo stuck on the door can be a big hint here. The clusters appear pretty quickly so buying even 10 cards from a company could be enough to start an attack with good chances.&lt;/p&gt;
+&lt;p&gt;This pattern persisted through two stacks of cards (individually packaged I might add) so if you know the supplier used you could have a good chance of guessing a valid card. The big “security by X” logo stuck on the door can be a big hint here. The clusters appear pretty quickly so buying even 10 cards from a company could be enough to start an attack with good chances.&lt;/p&gt;
 
 &lt;p&gt;Another scenario is if you obtain a lost invalid or partially valid (eg. low security areas only) card, you can use that to stage an attack by guessing numbers around it with potentially some success.&lt;/p&gt;
 
-&lt;p&gt;However the addition of even a 2 digit pincode along with the RFID card makes these attacks infeasible on increased input time alone.&lt;/p&gt;
+&lt;p&gt;However, the addition of even a 2 digit pincode along with the RFID card makes these attacks infeasible on increased input time alone.&lt;/p&gt;
 
 &lt;p&gt;Another mitigation strategy is to increase the processing time of cards into the range of seconds. This has the added benefit of not only decreasing the feasibility of such an attack but also not requiring users to change their behavior. This however does not protect from lost or stolen cards like an additional pincode.&lt;/p&gt;
 </description>
@@ -142,14 +166,14 @@
         </item>
         
         <item>
-            <title>Duplicating house keys using a 3d printer, 2013-03-05</title>
+            <title>Duplicating house keys using a 3d printer</title>
             <link>/2013/03/05/Duplicating_House_Keys_Using_a_3D_Printer.html</link>
             <guid isPermaLink="true">/2013/03/05/Duplicating_House_Keys_Using_a_3D_Printer.html</guid>
             <description>&lt;p&gt;I had the idea to duplicate some house keys on my Makerbot Thing-O-Matic 3D printer after seeing a post about in on thingiverse &lt;a href=&quot;http://www.thingiverse.com/thing:8925&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So after messing around with the script provided by usr nrp for a while i couldnt really get it to work so i decided to just make a script from scratch to improve my SCAD skills. (SCAD is like a programing language for creating parametric 3d CAD objects)&lt;/p&gt;
+&lt;p&gt;So after messing around with the script provided by usr nrp for a while I couldn’t really get it to work so i decided to just make a script from scratch to improve my SCAD skills. (SCAD is like a programing language for creating parametric 3d CAD objects)&lt;/p&gt;
 
-&lt;p&gt;After a few hours with a key and a pair of digital calipers i got an object that fit in the lock but has not been cut (think of a blank key).&lt;/p&gt;
+&lt;p&gt;After a few hours with a key and a pair of digital calipers I got an object that fit in the lock but has not been cut (think of a blank key).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2013-03-05/key.jpg&quot; alt=&quot;Key Blank Openscad&quot; /&gt;&lt;/p&gt;
 
@@ -163,7 +187,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2013-03-05/IMG_0255.jpg&quot; alt=&quot;All keys&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Eventually came up with some results as shown above. After the measurements where perfected the keys started to work. The keys are brittle but most locks don’t have much resistance turning the key when the key fits. The use of a torsion bar from a lock pick set to turn the lock could be used on rusted or heavy locks.&lt;/p&gt;
+&lt;p&gt;Eventually came up with some results as shown above. After the measurements where perfected, the keys started to work. The keys are brittle but most locks don’t have much resistance turning the key when the key fits. The use of a torsion bar from a lock pick set to turn the lock could be used on rusted or heavy locks.&lt;/p&gt;
 
 &lt;p&gt;Every key has a bit-code, this is a set of numbers that identify the key’s ID number. Any similar style key with the same bit-code will work in the same lock. I was able to guess the bit-code but this photo will show what im doing. We are measuring the dips and not the ridges, the ridges exist to ensure the tumbler pins rest in place.&lt;/p&gt;
 
@@ -190,15 +214,15 @@
             <title>Fixing a broken Samsung 2233 LCD</title>
             <link>/2012/11/05/Fixing_a_Broken_Samsung_2233_LCD.html</link>
             <guid isPermaLink="true">/2012/11/05/Fixing_a_Broken_Samsung_2233_LCD.html</guid>
-            <description>&lt;p&gt;I bought 3 Samsung 2233 120hz LCD’s on the cheap before they where being discontinued over a year ago. They are great screens and the 120hz refresh rate is just very nice on the eyes.&lt;/p&gt;
+            <description>&lt;p&gt;I bought 3 Samsung 2233 120hz LCD’s on the cheap before they were being discontinued over a year ago. They are great screens and the 120hz refresh rate is just very nice on the eyes.&lt;/p&gt;
 
-&lt;p&gt;However one of them broke! Devastated i immediately took the thing apart. It would turn on for only a second, the back-light would flash and turn off with the LCD still functioning, a broken backlight. Having encounterd the problem many many times i immediately thought it was a leaky capacitor. Easy enough thing to fix, replace a few broken capacitors with some from jaycar. However all the capacitors where 100% fine.&lt;/p&gt;
+&lt;p&gt;However one of them broke! Devastated i immediately took the thing apart. It would turn on for only a second, the back-light would flash and turn off with the LCD still functioning, a broken backlight. Having encounterd the problem many times i immediately thought it was a leaky capacitor. Easy enough thing to fix, replace a few broken capacitors with some from jaycar. However, all the capacitors where 100% fine.&lt;/p&gt;
 
-&lt;p&gt;I checked the primary rails of 13v, 5v, 3.3v and they where all fine when the screen was on. So its not the capacitors or the rails. So i checked the Backlight control lines that lead into the power supply for spikes or changes. Everything still operating as expected.&lt;/p&gt;
+&lt;p&gt;I checked the primary rails of 13v, 5v, 3.3v, and they were all fine when the screen was on. So its not the capacitors or the rails. So I checked the Backlight control lines that lead into the power supply for spikes or changes. Everything still operating as expected.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2012-11-05/Backlight.jpg&quot; alt=&quot;Backlight&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I followed where the control lines lead on the PCB and was lead to a Control chip. After some probing i noticed one of its feed back lines was out of the expected range according to the datasheet of 1-2v. Its lines connected to a set of transistors that in turn connected to the LCD inverter output.&lt;/p&gt;
+&lt;p&gt;I followed where the control lines lead on the PCB and was lead to a Control chip. After some probing, I noticed one of its feed back lines was out of the expected range according to the datasheet of 1-2v. Its lines connected to a set of transistors that in turn connected to the LCD inverter output.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2012-11-05/backlight_outline.jpg&quot; alt=&quot;Backlight outline&quot; /&gt;&lt;/p&gt;
 
@@ -268,7 +292,7 @@
             <guid isPermaLink="true">/2012/08/29/Block_Cipher_Modes_of_Operation.html</guid>
             <description>&lt;p&gt;There is more to encryption than just a fancy cipher. A badly implemented encryption method can be just as bad as an insecure cipher. One of the factors when choosing how to encrypt a file is the mode of operation.&lt;/p&gt;
 
-&lt;p&gt;Say you are working on a brand new top secret tank design. You have finished the blueprints and now you need to send it halfway across the country to be built. Due to the nature of this special tank you need to ensure that it is kept a secret so you decide to encrypt the plans with AES.
+&lt;p&gt;Say you are working on a brand-new top secret tank design. You have finished the blueprints and now you need to send it halfway across the country to be built. Due to the nature of this special tank you need to ensure that it is kept a secret so you decide to encrypt the plans with AES.
 You pre-shared a key the last time you where at the manufacturing facility so the key is secure but you use vanilla AES-128-ECB (Electronic codebook) encryption, where every block of the file is simply encrypted using the key.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ openssl aes-128-ecb -in M1A1.BMP -out M1A1-ecb.BMP
@@ -276,18 +300,18 @@ enter aes-128-cbc encryption password: ****
 Verifying – enter aes-128-cbc encryption password: ****
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;However during transport a 3rd party was able to intercept the files. They where not able to decrypt the file as they did not know the encryption key but they where able to copy the BMP header from another similar sized file.&lt;/p&gt;
+&lt;p&gt;However, during transport a 3rd party was able to intercept the files. They were not able to decrypt the file as they did not know the encryption key, but they were able to copy the BMP header from another similar sized file.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ dd if=M1A1.BMP of=M1A1-ecb.BMP bs=1 count=54 conv=notrunc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;When they opened the file in a image program they where able to get a rough outline of the image.&lt;/p&gt;
+&lt;p&gt;When they opened the file in a image program, they were able to get a rough outline of the image.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2012-08-29/Mode-of-operations-comparison.jpg&quot; alt=&quot;Cipher Modes&quot; /&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;There is not enough information to independently construct the tank but they can see what is being worked on. This happens due to problems in how repetitive data is encrypted and is a problem with all major encryption standards. When you encrypt 2 identical blocks of data you can expect it to have the same output. Images can have large blocks of color that are identical. Because of this when rendered in an image program you can get an outline like above.
+&lt;p&gt;There is not enough information to independently construct the tank, but they can see what is being worked on. This happens due to problems in how repetitive data is encrypted and is a problem with all major encryption standards. When you encrypt 2 identical blocks of data, you can expect it to have the same output. Images can have large blocks of color that are identical. Because of this, when rendered in an image program you can get an outline like above.
 Because of this there was a need for new ways to encrypt data so that it appears as completely unreadable data such as in the AES128 CBC example above. One of the most popular ways of doing this is by using Cipher-block chaining (CBC). This is the default mode for encrypted ZIP files and by far the most common of all modes.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2012-08-29/Cbc_encryption.png&quot; alt=&quot;Cipher Modes&quot; /&gt;&lt;/p&gt;
@@ -296,7 +320,7 @@ Because of this there was a need for new ways to encrypt data so that it appears
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/posts/2012-08-29/Ctr_encryption.png&quot; alt=&quot;Cipher Modes&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Another method of introducing this random propagation to the cypher-text is by transforming the block cypher into a stream cypher. Using it to create a key-stream by encrypting a increasing counter using a secret key and XOR’ing that with the plaintext. This has the added benefit of not requiring padding of data as a precise length of key-stream can be created. This is called Counter (CTR) mode. Some people feel that having such a systematic input is an unnecessary risk so the addition of a Initialization Vector (IV) added in some way to the counter recommended. However the Security of this mode is largely dependent on the security of the underlying block cipher.&lt;/p&gt;
+&lt;p&gt;Another method of introducing this random propagation to the cypher-text is by transforming the block cypher into a stream cypher. Using it to create a key-stream by encrypting a increasing counter using a secret key and XOR’ing that with the plaintext. This has the added benefit of not requiring padding of data as a precise length of key-stream can be created. This is called Counter (CTR) mode. Some people feel that having such a systematic input is an unnecessary risk so the addition of a Initialization Vector (IV) added in some way to the counter recommended. However, the Security of this mode is largely dependent on the security of the underlying block cipher.&lt;/p&gt;
 
 &lt;p&gt;This mode has the benefit of being able to encrypt and decrypt any block using parallel computations making it very suitable for disk level encryption. Random access and even pre-processing making this one of the fastest common modes and also the simplest to implement.&lt;/p&gt;
 
@@ -304,13 +328,13 @@ Because of this there was a need for new ways to encrypt data so that it appears
 
 &lt;p&gt;One such mode is Counter with CBC-MAC (CCM). It has the requirement of 128-bit blocks such as AES. It uses a Counter (CTR) Mode for confidentiality and CBC-MAC for integrity and authenticity. While these steps are normally considered independent there are implementations that are not secure so this standard defines a good interleaving of data before combination with the key-stream. This way any change to the data will result in a large and unpredictable change in the MAC, showing proof if the data has been tampered. This however comes at the cost of data expansion. The MAC takes up space at the cost of improved security.&lt;/p&gt;
 
-&lt;p&gt;I wont go into the detail of how this mode works as it is very complex but I will mention that its major disadvantage is that it is very slow and has no support for parallel computation. For this reason Galois/Counter Mode (GCM) is preferred for high speed communication. Its major speed improvement is the use of a much faster hash function, but uses the CTR (counter) mode for confidentiality like CCM.&lt;/p&gt;
+&lt;p&gt;I won’t go into the detail of how this mode works as it is very complex but I will mention that its major disadvantage is that it is very slow and has no support for parallel computation. For this reason Galois/Counter Mode (GCM) is preferred for high speed communication. Its major speed improvement is the use of a much faster hash function, but uses the CTR (counter) mode for confidentiality like CCM.&lt;/p&gt;
 
 &lt;p&gt;Some modes are purpose built or chosen to serve certain functions. Counter (CTR) for example is very useful for fast, random-access and parallel computation and because of this it is very useful for hard drive storage. Hard drives are already split up into blocks known as sectors so you could easily use the sector number as the counter and achieve hard drive encryption with very little modification of a file-system driver.&lt;/p&gt;
 
-&lt;p&gt;However this would raise various other problems unique to hard disk drives such as differences between logical and physical sectors so the XEX-based tweaked-codebook mode with cipher-text stealing (XTS) was created with the purpose of securely encrypting block based storage devices. It does not provide full integrity and authenticity protection but does provide some limited protection from malicious manipulation of encrypted data. This limitation is due to a design decision to avoid data expansion caused by adding integrity and authenticity.&lt;/p&gt;
+&lt;p&gt;However, this would raise various other problems unique to hard disk drives such as differences between logical and physical sectors so the XEX-based tweaked-codebook mode with cipher-text stealing (XTS) was created with the purpose of securely encrypting block based storage devices. It does not provide full integrity and authenticity protection but does provide some limited protection from malicious manipulation of encrypted data. This limitation is due to a design decision to avoid data expansion caused by adding integrity and authenticity.&lt;/p&gt;
 
-&lt;p&gt;So while there are various modes of operation with block based cyphers the exact mode that should be used depends highly on the work being done. There are many many other modes not mentioned here but have similar purposes to the modes already mentioned above. In computer security the weakest link is often enough to break the rest of the system. Plain encryption alone is not enough to secure your data.&lt;/p&gt;
+&lt;p&gt;There are various modes of operation with block based cyphers, the exact mode that should be used depends highly on the work being done. There are many other modes not mentioned here but have similar purposes to the modes already mentioned above. In computer security the weakest link is often enough to break the rest of the system. Plain encryption alone is not enough to secure your data.&lt;/p&gt;
 </description>
             <pubDate>Wed, 29 Aug 2012 00:00:00 +1000</pubDate>
         </item>

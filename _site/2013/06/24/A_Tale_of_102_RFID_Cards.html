@@ -153,13 +153,13 @@
   </header>
   <section class="post-content"><p>About 6 months ago i bought 102 EM4100 protocol RFID cards (From <a href="http://tinyurl.com/axrct2r">here</a>) and a compatible RFID reader <a href="https://www.sparkfun.com/products/8419">https://www.sparkfun.com/products/8419</a>. This was to investigate how it was that these common RFID cards work.</p>
 
-<p>EM4100 protocol cards, like the ones i bought, are factory programed with an 8bit Customer or Version ID, 32bit unique code and some parity information. Once the card powers up from being within proximity of a reader it starts blasting out this code encoded in Manchester Encoding and looks something like the following:</p>
+<p>EM4100 protocol cards, like the ones I bought, are factory programed with a 8bit Customer or Version ID, 32bit unique code and some parity information. Once the card powers up from being within proximity of a reader it starts blasting out this code encoded in Manchester Encoding and looks something like the following:</p>
 
 <p><img src="/assets/img/posts/2013-06-24/capture.png" alt="Data capture" /></p>
 
 <p>The theoretical minimum transmission speed possible is about 28ms, however many readers require you to transmit this code twice for it to be accepted.</p>
 
-<p>This gives a total possible number of unique cards of 4,294,967,296 (2^32) or 1,099,511,627,776 (2^40) depending on if unique Customer or Version ID’s are used. At the theoretical minimum transmission speed of 28ms this gives a worst case brute force time of 3.8 years or 975.5 years if also using the Customer or Version ID’s bits.</p>
+<p>This gives a total possible number of unique cards of 4,294,967,296 (2^32) or 1,099,511,627,776 (2^40) depending on if unique Customer or Version IDs are used. At the theoretical minimum transmission speed of 28ms this gives the worst case brute force time of 3.8 years or 975.5 years if also using the Customer or Version ID’s bits.</p>
 
 <!--more-->
 
@@ -167,15 +167,15 @@
 
 <p>A more realistic example of 200 valid cards would take 6.959 days or 4.87895 years without knowledge of the Customer or Version ID.</p>
 
-<p>One major security feature is the relatively slow reading time, you will have a hard time finding a commercial reader that can read cards back to back at 28 milliseconds each. Generally you get a reading time between 0.1 and 1 seconds.</p>
+<p>One major security feature is the relatively slow reading time, you will have a hard time finding a commercial reader that can read cards back-to-back at 28 milliseconds each. Generally you get a reading time between 0.1 and 1 seconds.</p>
 
-<p>However this security is relying on the numbers being uniquely random. If all cards use the same Customer or Version ID and an attacker has knowledge of this Customer or Version ID they have reduced the system entropy by 1,095,216,660,480 potential cards, a 99.61% reduction.</p>
+<p>However, this security is relying on the numbers being uniquely random. If all cards use the same Customer or Version ID and an attacker has knowledge of this Customer or Version ID they have reduced the system entropy by 1,095,216,660,480 potential cards, a 99.61% reduction.</p>
 
 <p>So with the entire security of the system relying on the strength of the random number generator used to program these cards, lets have a look at two separate packs of 51 cards i bought on eBay from China.</p>
 
 <p>99 of the cards had the same Customer or Version ID of 0×06 with the remaining 3 cards having 0×07.</p>
 
-<p>Here is a graph showing the 99 cards in the order they where shipped in with their Customer or Version ID omitted.</p>
+<p>Here is a graph showing the 99 cards in the order they were shipped in with their Customer or Version ID omitted.</p>
 
 <p><img src="/assets/img/posts/2013-06-24/graph.png" alt="Data capture" /></p>
 
@@ -196,7 +196,7 @@
   </tbody>
 </table>
 
-<p>Right off the bat you can tell that there is a problem here, the vast majority of cards are with a very close proximity of others. The problem is even worse when the cards have been clustered.</p>
+<p>Right off the bat you can tell that there is a problem here, the vast majority of cards are a proximity of others. The problem is even worse when the cards have been clustered.</p>
 
 <table>
   <thead>
@@ -261,11 +261,11 @@
 
 <p>Even with a more realistic reading time of 0.2 seconds per card you have a 40.4% chance of guessing a valid RFID card within 5666.448 seconds or 95 minutes based on 1 card within cluster 1 alone. Including cluster 2 you have a 78.08% chance of guessing a valid RFID card in under 10292.948 seconds or 172 minutes.</p>
 
-<p>This pattern persisted through two stacks of cards (individually packaged i might add) so if you know the supplier used you could have a good chance of guessing a valid card. The big “security by X” logo stuck on the door can be a big hint here. The clusters appear pretty quickly so buying even 10 cards from a company could be enough to start an attack with good chances.</p>
+<p>This pattern persisted through two stacks of cards (individually packaged I might add) so if you know the supplier used you could have a good chance of guessing a valid card. The big “security by X” logo stuck on the door can be a big hint here. The clusters appear pretty quickly so buying even 10 cards from a company could be enough to start an attack with good chances.</p>
 
 <p>Another scenario is if you obtain a lost invalid or partially valid (eg. low security areas only) card, you can use that to stage an attack by guessing numbers around it with potentially some success.</p>
 
-<p>However the addition of even a 2 digit pincode along with the RFID card makes these attacks infeasible on increased input time alone.</p>
+<p>However, the addition of even a 2 digit pincode along with the RFID card makes these attacks infeasible on increased input time alone.</p>
 
 <p>Another mitigation strategy is to increase the processing time of cards into the range of seconds. This has the added benefit of not only decreasing the feasibility of such an attack but also not requiring users to change their behavior. This however does not protect from lost or stolen cards like an additional pincode.</p>
 </section>
@@ -363,7 +363,7 @@
   <div id="previous-post" class="post-nav-post">
       <p>Previous post</p>
       <a href="/2013/03/05/Duplicating_House_Keys_Using_a_3D_Printer.html">
-        Duplicating house keys using a 3d printer, 2013-03-05
+        Duplicating house keys using a 3d printer
       </a>
   </div>
   
@@ -441,15 +441,6 @@
 
 
 
-
-<li>
-	<a href="https://twitter.com/ginaux" title="Follow on Twitter" class="type">
-        <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
-	</a>
-</li>
 
 
 

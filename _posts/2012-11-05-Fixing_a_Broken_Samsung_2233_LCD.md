@@ -8,15 +8,15 @@ thumbnail: "assets/img/pexels/circuit.jpeg"
 tags:
   - Electronics
 ---
-I bought 3 Samsung 2233 120hz LCD’s on the cheap before they where being discontinued over a year ago. They are great screens and the 120hz refresh rate is just very nice on the eyes.
+I bought 3 Samsung 2233 120hz LCD’s on the cheap before they were being discontinued over a year ago. They are great screens and the 120hz refresh rate is just very nice on the eyes.
 
-However one of them broke! Devastated i immediately took the thing apart. It would turn on for only a second, the back-light would flash and turn off with the LCD still functioning, a broken backlight. Having encounterd the problem many many times i immediately thought it was a leaky capacitor. Easy enough thing to fix, replace a few broken capacitors with some from jaycar. However all the capacitors where 100% fine.
+However one of them broke! Devastated i immediately took the thing apart. It would turn on for only a second, the back-light would flash and turn off with the LCD still functioning, a broken backlight. Having encounterd the problem many times i immediately thought it was a leaky capacitor. Easy enough thing to fix, replace a few broken capacitors with some from jaycar. However, all the capacitors where 100% fine.
 
-I checked the primary rails of 13v, 5v, 3.3v and they where all fine when the screen was on. So its not the capacitors or the rails. So i checked the Backlight control lines that lead into the power supply for spikes or changes. Everything still operating as expected.
+I checked the primary rails of 13v, 5v, 3.3v, and they were all fine when the screen was on. So its not the capacitors or the rails. So I checked the Backlight control lines that lead into the power supply for spikes or changes. Everything still operating as expected.
 
 ![Backlight](/assets/img/posts/2012-11-05/Backlight.jpg)
 
-I followed where the control lines lead on the PCB and was lead to a Control chip. After some probing i noticed one of its feed back lines was out of the expected range according to the datasheet of 1-2v. Its lines connected to a set of transistors that in turn connected to the LCD inverter output.
+I followed where the control lines lead on the PCB and was lead to a Control chip. After some probing, I noticed one of its feed back lines was out of the expected range according to the datasheet of 1-2v. Its lines connected to a set of transistors that in turn connected to the LCD inverter output.
 
 ![Backlight outline](/assets/img/posts/2012-11-05/backlight_outline.jpg)
 

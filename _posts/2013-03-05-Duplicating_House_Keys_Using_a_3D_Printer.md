@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Duplicating house keys using a 3d printer, 2013-03-05
+title: Duplicating house keys using a 3d printer
 created_at: 2013-03-05 09:00:00 +0000
 kind: article
 feature-img: "assets/img/posts/2013-03-05/IMG_0255.jpg"
@@ -17,9 +17,9 @@ header-includes:
 
 I had the idea to duplicate some house keys on my Makerbot Thing-O-Matic 3D printer after seeing a post about in on thingiverse [here](http://www.thingiverse.com/thing:8925).
 
-So after messing around with the script provided by usr nrp for a while i couldnt really get it to work so i decided to just make a script from scratch to improve my SCAD skills. (SCAD is like a programing language for creating parametric 3d CAD objects)
+So after messing around with the script provided by usr nrp for a while I couldn't really get it to work so i decided to just make a script from scratch to improve my SCAD skills. (SCAD is like a programing language for creating parametric 3d CAD objects)
 
-After a few hours with a key and a pair of digital calipers i got an object that fit in the lock but has not been cut (think of a blank key).
+After a few hours with a key and a pair of digital calipers I got an object that fit in the lock but has not been cut (think of a blank key).
 
 ![Key Blank Openscad](/assets/img/posts/2013-03-05/key.jpg)
 
@@ -33,7 +33,7 @@ This step was mostly trial and error, i made modifications halfway through to re
 
 ![All keys](/assets/img/posts/2013-03-05/IMG_0255.jpg)
 
-Eventually came up with some results as shown above. After the measurements where perfected the keys started to work. The keys are brittle but most locks don’t have much resistance turning the key when the key fits. The use of a torsion bar from a lock pick set to turn the lock could be used on rusted or heavy locks.
+Eventually came up with some results as shown above. After the measurements where perfected, the keys started to work. The keys are brittle but most locks don’t have much resistance turning the key when the key fits. The use of a torsion bar from a lock pick set to turn the lock could be used on rusted or heavy locks.
 
 Every key has a bit-code, this is a set of numbers that identify the key’s ID number. Any similar style key with the same bit-code will work in the same lock. I was able to guess the bit-code but this photo will show what im doing. We are measuring the dips and not the ridges, the ridges exist to ensure the tumbler pins rest in place.
 

@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: ""
+url: "ironmoon.net"
 title: IronMoon # site's title
 description: "A collection of pseudorandom thoughts" # used by search engines
 
