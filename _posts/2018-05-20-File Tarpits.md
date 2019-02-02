@@ -7,7 +7,7 @@ thumbnail: "assets/img/pexels/computer.jpeg"
 tags:
     - Honeypots
     - Linux
-    - Security
+    - Cyber Security
 ---
 
 In the [previous post]({{ site.baseurl }}{% post_url 2018-05-19-File Based Honeypots with Auditd %}) we lernt about the power of file honeypots to detect malicious activity. But in this world of automation the time it takes for you to respond may be so long that its unlikely you can respond in time. In this post we will discuss some potential tactics to make your linux systems frustating to attackers who already have access and slow them down using some linux filesystem tricks.

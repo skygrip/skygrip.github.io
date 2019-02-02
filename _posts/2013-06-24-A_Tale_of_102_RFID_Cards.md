@@ -7,7 +7,7 @@ thumbnail: "assets/img/posts/2013-06-24/capture.png"
 tags:
     - RFID
     - Physical Security
-    - Security
+    - Cyber Security
     - Cryprography
 ---
 About 6 months ago i bought 102 EM4100 protocol RFID cards (From [here](http://tinyurl.com/axrct2r)) and a compatible RFID reader [https://www.sparkfun.com/products/8419](https://www.sparkfun.com/products/8419). This was to investigate how it was that these common RFID cards work.

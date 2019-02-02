@@ -6,7 +6,7 @@ kind: article
 feature-img: "assets/img/posts/2012-08-29/Mode-of-operations-comparison.jpg"
 thumbnail: "assets/img/posts/2012-08-29/Mode-of-operations-comparison.jpg"
 tags:
-  - Cryptography
+  - Cryprography
 ---
 There is more to encryption than just a fancy cipher. A badly implemented encryption method can be just as bad as an insecure cipher. One of the factors when choosing how to encrypt a file is the mode of operation.
 

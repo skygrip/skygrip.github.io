@@ -7,7 +7,7 @@ thumbnail: "assets/img/pexels/computer.jpeg"
 tags:
     - Honeypots
     - Linux
-    - Security
+    - Cyber Security
     - Auditd
 ---
 Honeypots are all the rage with them being a fantastic tool to quickly identify malicious activity from usual system activity. There are many kinds of honeypots, including honeypot ports (honeyports) and even entire honey networks (honeynet), however the one I want to talk about is honeypot files (honeyfiles).

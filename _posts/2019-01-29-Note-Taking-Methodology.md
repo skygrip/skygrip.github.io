@@ -5,8 +5,9 @@ date: 2019-01-29 17:00:00 +1100
 feature-img: "assets/img/pexels/book-glass.jpeg"
 thumbnail: "assets/img/pexels/book-glass.jpeg"
 tags:
-    - Security
+    - Cyber Security
     - Cyber Intelligence
+    - Forensics and Incident Response
 ---
 
 Note taking is critical during Incident Response and Forensics.

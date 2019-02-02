@@ -6,7 +6,7 @@ feature-img: "assets/img/posts/2018-06-17/20180617_over.jpg"
 thumbnail: "assets/img/posts/2018-06-17/20180617_over.jpg"
 tags:
     - Electronics
-    - Security
+    - Cyber Security
 ---
 
 Sometimes you forget the password on your new [System76 Galiga Pro 3](https://system76.com/laptops/galago) laptop and you don't realise until you broke your bootloader and need to change your boot order manually.

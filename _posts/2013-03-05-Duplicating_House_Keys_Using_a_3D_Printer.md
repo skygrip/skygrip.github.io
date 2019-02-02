@@ -6,9 +6,8 @@ kind: article
 feature-img: "assets/img/posts/2013-03-05/IMG_0255.jpg"
 thumbnail: "assets/img/posts/2013-03-05/IMG_0255.jpg"
 tags:
-    - 3D printing
+    - 3D Printing
     - Physical Security
-    - Security
  
 header-includes:
     - \hypersetup{colorlinks=true}
