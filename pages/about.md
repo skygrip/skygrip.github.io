@@ -5,6 +5,13 @@ permalink: /about/
 feature-img: "assets/img/pexels/circuit.jpeg"
 ---
 
-Just a collection of random projects.
+I am an Information Security Professional with over 5 years of experience in Security Monitoring, Incident Response, Systems administration and System Hardening. My key areas of interest in the industry are around effective Incident Response Techniques, Honeypots as high confidence alarms, and the evolution towards Purple Team style Security Operations.
 
-Security, Linux, 3D printing, Programing, MCU’s, Electronics, Uni assignments and more!
+I have achieved GIAC certifications GSEC, GCIH, GCIA, GCFA, with challenge coins won in SANS FOR508, SEC503, and SEC401.
+
+I am currently looking for Job opportunities in Sydney, Australia. If you are interested in learning more on what i can bring to your security team, send me an email.
+
+
+You can contact me at the following:
+
+![Contact Me](/assets/img/Pages/AboutCaptcha.png)
