@@ -1,4 +1,4 @@
-consuming---
+---
 layout: post
 title: 'My Forensic and Incident Response Note Taking Methodology'
 DateTime: 2019-02-04 17:00:00 +1100
