@@ -214,6 +214,7 @@ During the research of this methodology and writing this blogpost i read the fol
 
 
 # Version History
+
 | Date       | Update Note     |
 |------------|-----------------|
 | 2019-02-04 | Initial post    |
