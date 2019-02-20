@@ -2,8 +2,8 @@
 layout: post
 title: A tale of 102 RFID cards
 date: 2013-06-24 09:00:00 +0000
-feature-img: "assets/img/posts/2013-06-24/capture.png"
-thumbnail: "assets/img/posts/2013-06-24/capture.png"
+feature-img: "assets/img/posts/2013-06-24/capture.jpg"
+thumbnail: "assets/img/posts/2013-06-24/capture.jpg"
 tags:
     - RFID
     - Physical Security
