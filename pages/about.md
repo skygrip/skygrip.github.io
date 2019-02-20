@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
+title: 👨 About
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/board-circuit-board-circuits-825258.jpg"
 ---
 
 I am an Information Security Professional with over 5 years of experience in Security Monitoring, Incident Response, Systems administration and System Hardening. My key areas of interest in the industry are around effective Incident Response Techniques, Honeypots as high confidence alarms, and the evolution towards Purple Team style Security Operations.

@@ -3,8 +3,8 @@ layout: post
 title: Motorbike Clock Part 1
 created_at: 2012-09-02 09:00:00 +0000
 kind: article
-feature-img: "assets/img/pexels/circuit.jpeg"
-thumbnail: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/artificial-intelligence-circuit-board-computing-50711.jpg"
+thumbnail: "assets/img/pexels/artificial-intelligence-circuit-board-computing-50711.jpg"
 tags:
   - Motorbike Clock
   - Electronics

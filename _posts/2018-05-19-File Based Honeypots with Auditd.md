@@ -2,8 +2,8 @@
 layout: post
 title: File Based Honeypots with Auditd
 date: 2018-05-19 09:00:00 +0000
-feature-img: "assets/img/pexels/computer.jpeg"
-thumbnail: "assets/img/pexels/computer.jpeg"
+feature-img: "assets/img/pexels/ai-artificial-intelligence-blur-546819.jpg"
+thumbnail: "assets/img/pexels/ai-artificial-intelligence-blur-546819.jpg"
 tags:
     - Honeypots
     - Linux
@@ -39,7 +39,7 @@ In these rules "-w" means file followed by the filepath, and "-p wra" means trig
 
     root@ironmoon ~ # augenrules
     root@ironmoon ~ # pkill -HUP -P 1 auditd
-    
+
 Now when we even access the files we will get a triggered alert
 
 root@ironmoon / # aureport -f
@@ -63,5 +63,3 @@ Now when its collected at a network loging server you can set up alerts whenever
 
     root@ironmoon ~ # vim /etc/audisp/plugins.d/syslog.conf
     active = yes
-
-
