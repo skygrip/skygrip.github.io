@@ -14,7 +14,7 @@ About 6 months ago i bought 102 EM4100 protocol RFID cards (From [here](http://t
 
 EM4100 protocol cards, like the ones I bought, are factory programed with a 8bit Customer or Version ID, 32bit unique code and some parity information. Once the card powers up from being within proximity of a reader it starts blasting out this code encoded in Manchester Encoding and looks something like the following:
 
-![Data capture](/assets/img/posts/2013-06-24/capture.png)
+![Data capture](/assets/img/posts/2013-06-24/capture.jpg)
 
 The theoretical minimum transmission speed possible is about 28ms, however many readers require you to transmit this code twice for it to be accepted.
 
