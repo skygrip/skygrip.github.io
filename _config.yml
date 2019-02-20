@@ -17,7 +17,7 @@ theme_settings:
   header_text: > #two or three lines to describe your site
      <p>A collection of pseudorandom thoughts</p>
   header_text_feature_image: assets/img/pexels/triangular.jpeg
-  footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> with Icons made by <a href="https://smashicons.com/">SmashIcons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> and Stock Photography from <a href="https://www.pexels.com/">https://www.pexels.com</a> 
+  footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> with Icons made by <a href="https://smashicons.com/">SmashIcons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> and Stock Photography from <a href="https://www.pexels.com/">www.pexels.com</a>
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
   email_address: # Full email address, e.g. "sam@example.com"
