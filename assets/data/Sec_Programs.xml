@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Sec_Programs.xsl" ?>
+<Programs>
+  <Program>
+    <Name>Nmap</Name>
+    <URL>https://nmap.org/</URL>
+    <License>GPL-2.0</License>
+    <Tags>
+      <Tag>Recon</Tag>
+      <Tag>Active</Tag>
+    </Tags>
+    <Description>Network Scanning Tool</Description>
+    <Installation>Use System package Manager</Installation>
+    <Example>nmap -A example.com</Example>
+  </Program>
+  <Program>
+    <Name>The Harvester</Name>
+    <URL>https://github.com/laramies/theHarvester</URL>
+    <License>GPL-2.0</License>
+    <Tags>
+      <Tag>Recon</Tag>
+      <Tag>Passive</Tag>
+    </Tags>
+    <Description>Passive and Active emails, subdomains and names harvester</Description>
+    <Installation>
+      <![CDATA[Install from <a href="https://github.com/laramies/theHarvester">GitRepo</a>
+    ```
+    git clone https://github.com/laramies/theHarvester.git
+    python3 -m pip install -r requirements.txt
+    ```
+    If you have API keys for shodan ect... add them to `api-keys.yaml`]]>
+    </Installation>
+    <Example>theHarvester -d example.com</Example>
+  </Program>
+</Programs>
