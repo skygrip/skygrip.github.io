@@ -9,8 +9,6 @@ I am an Information Security Professional with over 5 years of experience in Sec
 
 I have achieved GIAC certifications GSEC, GCIH, GCIA, GCFA, with challenge coins won in SANS FOR508, SEC503, and SEC401.
 
-I am currently looking for Job opportunities in Sydney, Australia. If you are interested in learning more on what i can bring to your security team, send me an email.
-
 You can contact me at the following:
 
 ![Contact Me](/assets/img/Pages/AboutCaptcha.png)

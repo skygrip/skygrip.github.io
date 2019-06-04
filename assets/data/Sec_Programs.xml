@@ -6,18 +6,37 @@
     <URL>https://nmap.org/</URL>
     <License>GPL-2.0</License>
     <Tags>
+      <Tag>Windows</Tag>
+      <Tag>Linux</Tag>
       <Tag>Recon</Tag>
       <Tag>Active</Tag>
+      <Tag>Vulnerability Scanning</Tag>
     </Tags>
-    <Description>Network Scanning Tool</Description>
-    <Installation>Use System package Manager</Installation>
+    <Description>Nmap is used to discover hosts and services on a computer network by sending packets and analyzing the responses.</Description>
+    <Installation>Use system package manager</Installation>
     <Example>nmap -A example.com</Example>
   </Program>
+
+  <Program>
+      <Name>NMAP Vulscan</Name>
+      <URL>https://github.com/scipag/vulscan</URL>
+      <License>GLP-3.0</License>
+      <Tags>
+        <Tag>Windows</Tag>
+        <Tag>Linux</Tag>
+        <Tag>NMap</Tag>
+      </Tags>
+      <Description>Vulscan is a module which enhances nmap to a vulnerability scanner. The nmap option -sV enables version detection per service which is used to determine potential flaws according to the identified product. The data is looked up in an offline version of VulDB</Description>
+      <Installation>See git page for installation instructions</Installation>
+      <Example>nmap -sV --script=vulscan/vulscan.nse www.example.com</Example>
+    </Program>
+
   <Program>
     <Name>The Harvester</Name>
     <URL>https://github.com/laramies/theHarvester</URL>
     <License>GPL-2.0</License>
     <Tags>
+      <Tag>Python</Tag>
       <Tag>Recon</Tag>
       <Tag>Passive</Tag>
     </Tags>
@@ -30,6 +49,125 @@
     ```
     If you have API keys for shodan ect... add them to `api-keys.yaml`]]>
     </Installation>
-    <Example>theHarvester -d example.com</Example>
+    <Example>theHarvester -d example.com TODO</Example>
   </Program>
+
+  <Program>
+    <Name>Shodan</Name>
+    <URL>https://www.shodan.io></URL>
+    <License>Commercial</License>
+    <Tags>
+      <Tag>Webapp</Tag>
+      <Tag>Recon</Tag>
+      <Tag>Passive</Tag>
+    </Tags>
+    <Description>Web based search engine for internet devices</Description>
+    <Installation>Register at https://www.shodan.io</Installation>
+    <Example>TODO</Example>
+  </Program>
+
+  <Program>
+    <Name>Haveibeenpawned</Name>
+    <URL>https://haveibeenpwned.com/</URL>
+    <License>Unknown</License>
+    <Tags>
+      <Tag>Webapp</Tag>
+      <Tag>Recon</Tag>
+      <Tag>Incident Response</Tag>
+    </Tags>
+    <Description>Check if you have an account that has been compromised in a data breach</Description>
+    <Installation></Installation>
+    <Example></Example>
+  </Program>
+
+  <Program>
+    <Name>Farsight DNSDB Community Edition</Name>
+    <URL>https://www.farsightsecurity.com/dnsdb-community-edition/</URL>
+    <License>Commercial</License>
+    <Tags>
+        <Tag>Webapp</Tag>
+      <Tag>Recon</Tag>
+      <Tag>DNS</Tag>
+      <Tag>Passive</Tag>
+    </Tags>
+    <Description>Farsight's DNSDB Community Edition gives threat hunters and security professionals free access to the World’s Largest DNS Intelligence Database</Description>
+    <Installation></Installation>
+    <Example></Example>
+  </Program>
+
+
+  <Program>
+    <Name>OpenVAS</Name>
+    <URL>http://www.openvas.org/</URL>
+    <License>GPL-2.0</License>
+    <Tags>
+            <Tag>Linux</Tag>
+      <Tag>Vulnerability Scanning</Tag>
+      <Tag>Active</Tag>
+    </Tags>
+    <Description>OpenVAS is a full-featured vulnerability scanner. Its capabilities include unauthenticated testing, authenticated testing, various high level and low level Internet and industrial protocols, performance tuning for large-scale scans and a powerful internal programming language to implement any type of vulnerability test</Description>
+    <Installation>TODO</Installation>
+    <Example></Example>
+  </Program>
+
+  <Program>
+    <Name>ZMap</Name>
+    <URL>https://zmap.io/</URL>
+    <License>GPL-2.0</License>
+    <Tags>
+            <Tag>Linux</Tag>
+      <Tag>Recon</Tag>
+      <Tag>Active</Tag>
+    </Tags>
+    <Description>ZMap is a fast single packet network scanner designed for Internet-wide network surveys. On a typical desktop computer with a gigabit Ethernet connection, ZMap is capable scanning the entire public IPv4 address space in under 45 minutes. With a 10gigE connection and PF_RING, ZMap can scan the IPv4 address space in under 5 minutes</Description>
+    <Installation>Install using distro package management system.</Installation>
+    <Example></Example>
+  </Program>
+
+  <Program>
+    <Name>GitLeaks</Name>
+    <URL>https://github.com/zricethezav/gitleaks</URL>
+    <License>GPL-2.0</License>
+    <Tags>
+            <Tag>Windows</Tag>
+                  <Tag>Linux</Tag>
+      <Tag>Git</Tag>
+      <Tag>Tag2</Tag>
+    </Tags>
+    <Description>Audit git repos for secrets. Gitleaks provides a way for you to find unencrypted secrets and other unwanted data types in git source code repositories</Description>
+    <Installation>IInstall and run using Go package manager or Docker
+    ```
+    docker run --rm --name=gitleaks zricethezav/gitleaks
+    ```</Installation>
+    <Example></Example>
+  </Program>
+
+  <Program>
+    <Name>truffleHog</Name>
+    <URL>https://github.com/dxa4481/truffleHog</URL>
+    <License>GPL-2.0</License>
+    <Tags>
+            <Tag>Python</Tag>
+      <Tag>git</Tag>
+      <Tag>Tag2</Tag>
+    </Tags>
+    <Description>Searches through git repositories for high entropy strings and secrets, digging deep into commit history</Description>
+    <Installation>pip install truffleHog</Installation>
+    <Example>truffleHog --regex --entropy=False https://github.com/dxa4481/truffleHog.git
+</Example>
+  </Program>
+
+  <Program>
+    <Name></Name>
+    <URL></URL>
+    <License>GPL-2.0</License>
+    <Tags>
+      <Tag>Tag1</Tag>
+      <Tag>Tag2</Tag>
+    </Tags>
+    <Description></Description>
+    <Installation></Installation>
+    <Example></Example>
+  </Program>
+
 </Programs>
