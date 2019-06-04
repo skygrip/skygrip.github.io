@@ -1,22 +1,20 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "http://ironmoon.net"
+url: "https://ironmoon.net"
 title: IronMoon # site's title
 description: "A collection of pseudorandom thoughts" # used by search engines
-
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: IronMoon # blog's title
   avatar: assets/img/capacitor.svg
+  color_image: /assets/img/lineart.png # In post when you set color
   favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
 
   # Header and footer text
-  header_text: > #two or three lines to describe your site
+  header_text: >
      <p>A collection of pseudorandom thoughts</p>
-  header_text_feature_image: assets/img/pexels/triangular.jpeg
+  header_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> with Icons made by <a href="https://smashicons.com/">SmashIcons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> and Stock Photography from <a href="https://www.pexels.com/">www.pexels.com</a>
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
@@ -38,7 +36,7 @@ theme_settings:
   stack_exchange:  # Full URL
   steam:
   tumblr:
-  twitter:  # "twitter username"
+  twitter: # "twitter username"
   vimeo:
   wordpress:
   youtube:
@@ -56,18 +54,10 @@ theme_settings:
     wordpress:
     email: true
 
-  # Scripts / Features
+  # Scripts / Features 
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname:
   katex: true # Enable if using math markup
-
-  special_page:
-    search:
-      icon: "search" # Assuming page link and icon are the same
-      enabled: true
-    tags:
-      icon: "tags"
-      enabled: true
 
   # Localization strings
   str_follow_on: "Follow on"
@@ -81,28 +71,23 @@ theme_settings:
   str_previous_post: "Previous post"
   str_next_page: "Next"
   str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
   str_javascript_required_disqus: "Please enable JavaScript to view comments."
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
   # Post navigation
   post_navigation: true
 
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
 
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
-
 
 # PORTFOLIO
 collections:
   portfolio:
     output: true
     permalink: /:collection/:name
-
 
 # BUILD SETTINGS
 markdown: kramdown
@@ -111,5 +96,7 @@ sass:
   sass_dir: _sass
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag]
-remote_theme: sylhare/Type-on-Strap
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png", "package.json", "node_modules", "gulpfile.js", ".idea/*"]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
+# theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap # If using as a remote_theme in github
