@@ -41,7 +41,7 @@
       </head>
       <body>
         <div>
-          <h1>Progams</h1>
+          <h1>Programs</h1>
 
           <xsl:for-each select="Programs/Program">
             <div class="program">
