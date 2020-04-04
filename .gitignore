@@ -14,6 +14,7 @@ _development_tool/*
 .sass-cache/*
 *.css.map
 *.scssc
+.bundle/*
 
 # Theme Gem files
 Gemfile.lock
@@ -25,3 +26,5 @@ jekyll-theme-type-on-strap.gemspec
 **/node_modules/*
 *-test.md
 *copy.md
+.jekyll-cache/*
+test/*

@@ -1,83 +1,34 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://ironmoon.net"
-title: IronMoon # site's title
-description: "A collection of pseudorandom thoughts" # used by search engines
 
 # THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  avatar: assets/img/capacitor.svg
-  color_image: /assets/img/lineart.png # In post when you set color
-  favicon: assets/favicon.ico
+title: IronMoon                                    # site's title
+description: "A collection of pseudorandom thoughts"     # used by search engines
+avatar: assets/img/capacitor.svg                        # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
 
-  # Header and footer text
-  header_text: >
-     <p>A collection of pseudorandom thoughts</p>
-  header_feature_image: assets/img/pexels/triangular.jpeg
-  footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> with Icons made by <a href="https://smashicons.com/">SmashIcons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> and Stock Photography from <a href="https://www.pexels.com/">www.pexels.com</a>
-  # Icons
-  rss: true  # Make sure you created a feed.xml with feed.xml layout
-  email_address: # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  gitlab:
-  github: "skygrip"
-  google_plus:
-  instagram:
-  keybase:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: # "twitter username"
-  vimeo:
-  wordpress:
-  youtube:
 
-  # Sharing options
-  share_buttons:
-    facebook: true
-    twitter: true
-    google_plus:
-    tumblr:
-    pinterest:
-    pocket:
-    reddit: true
-    linkedin:
-    wordpress:
-    email: true
+# Header and footer text
+header_text: >
+   <p>A collection of pseudorandom thoughts</p>
+header_feature_image: assets/img/pexels/triangular.jpeg
+footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> with Icons made by <a href="https://smashicons.com/">SmashIcons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> and Stock Photography from <a href="https://www.pexels.com/">www.pexels.com</a>
 
-  # Scripts / Features 
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_share_on: "Share on"
-  str_add_to: "Add to"
-  str_email: "Email"
-  str_tweet: "Tweet"
-  str_pin_it: "Pin it"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
-
-  # Post navigation
-  post_navigation: true
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
+# Features
+katex: true                                             # Enable if using math markup
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+disqus_shortname:                                       # Your discus shortname for comments
+layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
+footer_icons:                                           # In _data/social.yml
+share_buttons:                                          # In _data/social.yml
+authors:                                                # In _data/authors.yml
+language:                                               # In _data/language.yml
 
 # PAGINATION
 paginate: 5
@@ -95,8 +46,9 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag]
-exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea",
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
           "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
-# theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
-remote_theme: sylhare/Type-on-Strap # If using as a remote_theme in github
+
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
