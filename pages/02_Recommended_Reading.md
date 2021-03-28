@@ -1,21 +1,11 @@
 ---
 layout: page
 title: 📖 Recommended Reading
-permalink: /Recommended_Reading/
+permalink: /recommended_reading/
 feature-img: "assets/img/pexels/book-coffee.jpeg"
 ---
 
 The following are books i can recommend reading in no particular order
-
-# Popular Psychology
-*   [How To Win Friends and Influence People](https://www.amazon.com/How-Win-Friends-Influence-People-ebook/dp/B003WEAI4E/) by Dale Carnegie.
-*   [How I Raised Myself From Failure To Success In Selling](https://www.amazon.com/Raised-Myself-Failure-Success-Selling-ebook/dp/B002XQAAWW/) by Frank Bettger
-*   [Find Out Anything From Anyone, Anytime](https://www.amazon.com/Find-Out-Anything-Anyone-Anytime-ebook/dp/B00HEZF9J6/) by James Pyle, and Maryann Karinch
-*   [So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You-ebook/dp/B01KFR64LQ/) by Cal Newport
-*   [Willpower Doesn't Work](https://www.amazon.com/Willpower-Doesnt-Work-Discover-Success-ebook/dp/B073P421QC/) by Benjamin P. Hardy
-*   [Verbal Judo](https://www.amazon.com/Verbal-Judo-Second-Gentle-Persuasion-ebook/dp/B00FJ3CMI6/) by George Thompson PhD
-*   [The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B078Y98RG8/) by Gene Kim, Kevin Behr, and George Spafford
-
 
 # Cyber Security, Digital Forensics and Incident Response
 *   [File System Forensic Analysis](https://www.amazon.com/System-Forensic-Analysis-Brian-Carrier-ebook-dp-B016N80EZ8/dp/B016N80EZ8/) by Brian Carrier
@@ -25,6 +15,14 @@ The following are books i can recommend reading in no particular order
 *   [How to Measure Anything in Cybersecurity Risk](https://www.amazon.com/How-Measure-Anything-Cybersecurity-Risk-ebook/dp/B01J4XYM16) by Douglas W. Hubbard, and Richard Seiersen
 *   [Incident Response & Computer Forensics, Third Edition](https://www.amazon.com/Incident-Response-Computer-Forensics-Third/dp/0071798684/) by Jason T. Luttgens, Matthew Pepe, and Kevin Mandia
 
+# Popular Psychology
+*   [How To Win Friends and Influence People](https://www.amazon.com/How-Win-Friends-Influence-People-ebook/dp/B003WEAI4E/) by Dale Carnegie.
+*   [How I Raised Myself From Failure To Success In Selling](https://www.amazon.com/Raised-Myself-Failure-Success-Selling-ebook/dp/B002XQAAWW/) by Frank Bettger
+*   [Find Out Anything From Anyone, Anytime](https://www.amazon.com/Find-Out-Anything-Anyone-Anytime-ebook/dp/B00HEZF9J6/) by James Pyle, and Maryann Karinch
+*   [So Good They Can't Ignore You](https://www.amazon.com/Good-They-Cant-Ignore-You-ebook/dp/B01KFR64LQ/) by Cal Newport
+*   [Willpower Doesn't Work](https://www.amazon.com/Willpower-Doesnt-Work-Discover-Success-ebook/dp/B073P421QC/) by Benjamin P. Hardy
+*   [Verbal Judo](https://www.amazon.com/Verbal-Judo-Second-Gentle-Persuasion-ebook/dp/B00FJ3CMI6/) by George Thompson PhD
+*   [The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B078Y98RG8/) by Gene Kim, Kevin Behr, and George Spafford
 
 # Electronics
 *   [The Art of Electronics](https://www.amazon.com/Art-Electronics-Paul-Horowitz-ebook/dp/B01BYJO2JU/) by Paul Horowitz, and Winfield Hill
@@ -42,7 +40,6 @@ The following are books i can recommend reading in no particular order
 
 # Podcasts
 *   [Risky Business](https://www.risky.biz/) Information Security Podcast
-*   [Braking Down Incident Response](https://www.imfsecurity.com/podcasts/) Information Security Podcast
 *   [Darknet Diaries](https://darknetdiaries.com/) Information Security Podcast
 *   [The Amp Hour](https://theamphour.com/) Electronics Podcast
 *   [The Dollop](http://thedollop.libsyn.com/) History Podcast
